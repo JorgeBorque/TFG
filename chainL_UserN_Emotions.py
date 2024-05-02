@@ -331,6 +331,9 @@ async def setup_settings(settings):
     emotionsForDoct = getEmotionDoctor(settings["EmotionsDoct"])
     txtForPatient = ""
     txtForDoctor = ""
+    sys_msgDct = ""
+    sys_msgNrs = ""
+    sys_msgPat = ""
 
     ### EXTRACCIÓN DE DATOS SEGÚN LAS OPCIONES MARCADAS POR EL USUARIO
     
