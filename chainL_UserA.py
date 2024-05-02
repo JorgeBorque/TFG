@@ -201,7 +201,7 @@ async def on_chat_start():
                 cl.input_widget.Select(
                     id="Model",
                     label="Model",
-                    values=["gpt-4", "AI-Growth-Lab_llama-2-7b-clinical-innovation", "mistralai_Mixtral-8x7B-Instruct-v0.1"],
+                    values=["gpt-4", "AI-Growth-Lab_llama-2-7b-clinical-innovation", "mistralai_Mixtral-8x7B-Instruct-v0.1", "meditron-7b", "TheBloke_meditron-7B-GPTQ"],
                     initial_index=1
                 ),
                 cl.input_widget.Select(
