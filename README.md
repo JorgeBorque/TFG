@@ -1,6 +1,8 @@
 Descripción del objetivo:
 Se busca representar una cita de un médico con un paciente en la que el médico intenta preguntar al paciente sobre sus síntomas y su estado con respecto a su enfermedad.
 
+La idea es utilizar los dos programas con emociones pero por ahora se mantienen las versiones antiguas sin emociones en el repositorio.
+
 Detalle a tener en cuenta: El mensaje inicial de todos los programas tiene que ser el mismo en todas las ejecuciones y tiene que estar indicado desde el código y no se puede cambiar en el programa ejecutado. El enfoque del mensaje es una presentación del paciente. 
 
 Escenarios disponibles:
@@ -33,11 +35,11 @@ Modos de uso de los programas - Casos de uso (Apartado DataExtract en las opcion
 
 Datos utilizados en cada programa:
   - Para programa UserA:
-      - Conjunto de datos sum (resúmenes extraídos de los historiales completos)
+      - Conjunto de datos sum (resúmenes extraídos de los historiales completos) -- Carpeta con sufijo _sum
   - Para programa UserN:
-      - Datos de los historiales médicos completos.
-      - Conjunto de datos con únicamente síntomas del paciente extraídos a partir de una consulta a uno de los modelos utilizados a partir del fichero del historial completo.
-      - Conjunto de preguntas resueltas por uno de los modelos utilizados a partir del fichero del historial completo.
+      - Datos de los historiales médicos completos. -- Carpeta sin sufijo
+      - Conjunto de datos con únicamente síntomas del paciente extraídos a partir de una consulta a uno de los modelos utilizados a partir del fichero del historial completo. -- Carpeta con sufijo _sympts
+      - Conjunto de preguntas resueltas por uno de los modelos utilizados a partir del fichero del historial completo. -- Carpeta con sufijo _ClinicalCase
 
 Es adecuado tener la carpeta data organizada originalmente para tener el punto común de acceso a los datos en cualquier ejecución de todo programa.
 
