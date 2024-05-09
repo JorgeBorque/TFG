@@ -229,20 +229,23 @@ async def setup_settings(settings):
   try:
     
     txtForPatient = ""
-    if settings["DataExtract"] == "chargeSpecificFileICC":
-        txtForPatient = chargeSpecificFile(1, "out_hce_insuf154_clin_innov_sum.txt",txtForPatient)
-    if settings["DataExtract"] == "chargeSpecificFileNOICC":
-        txtForPatient = chargeSpecificFile(2, "out_hce_no_insuf110_clin_innov_sum.txt",txtForPatient)
-    if settings["DataExtract"] == "chargeFromSpecific":
-        if settings["FileToExtractFrom"] == "ICC":
-            txtForPatient = chargeFromICCORNOICC(settings["NumberSamples"], 1, txtForPatient)
-        if settings["FileToExtractFrom"] == "NOICC":
-            txtForPatient = chargeFromICCORNOICC(settings["NumberSamples"], 2, txtForPatient)
-    sys_msgPat="You are a patient with this medical history:\n" + txtForPatient + "\nYou're talking to a doctor and you want to solve your latest illness and get diagnosed if you have heart failure or not. Ask and respond with short answers in first person in English as if you were a person without any knowledge in medicine and with a more uneducated language. Don't write previous responses you gave or responses you received. Don't change your role of being the patient and don't add reply/responses/additional information highlighted parts. Don't add {</div>\n\n} in the responses or useless endlines. If the doctor asks you how you feel, create relative feelings from the ones you may feel from your symptoms."
-    if settings["DataExtract"] == "charge1Each":
-        txtForPatient= charge1Each(txtForPatient)
-        sys_msgPat="You're a patient who has one of these two medical histories, pick one and keep the identifier of the patient:\n" + txtForPatient + "\nWhen you select one, discard totally the other history information. You're talking to a doctor and you want to solve your latest illness and get diagnosed if you have heart failure or not. Ask and respond with short answers in first person in English as if you were a person without any knowledge in medicine and with a more uneducated language. Don't write previous responses you gave or responses you received. Don't change your role of being the patient and don't add reply/responses/additional information highlighted parts. Don't add {</div>\n\n} in the responses or useless endlines. If the doctor asks you how you feel, create relative feelings from the ones you may feel from your symptoms."
-
+    sys_msgPat = ""
+    match settings["DataExtract"]:
+            case "chargeSpecificFileICC":
+                txtForPatient = chargeSpecificFile(1, "out_hce_insuf154_clin_innov_sum.txt",txtForPatient)
+            case "chargeSpecificFileNOICC":
+                txtForPatient = chargeSpecificFile(2, "out_hce_no_insuf110_clin_innov_sum.txt",txtForPatient)
+            case "chargeFromSpecific":
+                match settings["FileToExtractFrom"]:
+                    case "ICC":
+                        txtForPatient = chargeFromICCORNOICC(settings["NumberSamples"], 1, txtForPatient)
+                    case "NOICC":
+                        txtForPatient = chargeFromICCORNOICC(settings["NumberSamples"], 2, txtForPatient)
+            case "charge1Each":
+                txtForPatient= charge1Each(txtForPatient)
+                sys_msgPat="You're a patient who has one of these two medical histories, pick one and keep the identifier of the patient:\n" + txtForPatient + "\nWhen you select one, discard totally the other history information. You're talking to a doctor and you want to solve your latest illness and get diagnosed if you have heart failure or not. Ask and respond with short answers in first person in English as if you were a person without any knowledge in medicine and with a more uneducated language. Don't write previous responses you gave or responses you received. Don't change your role of being the patient and don't add reply/responses/additional information highlighted parts. Don't add {</div>\n\n} in the responses or useless endlines. If the doctor asks you how you feel, create relative feelings from the ones you may feel from your symptoms."   
+    if sys_msgPat == "":
+        sys_msgPat="You are a patient with this medical history:\n" + txtForPatient + "\nIf you don't get a name, an age or certain specific personal data, make it up. You're talking to a doctor and you want to solve your latest illness and get diagnosed if you have heart failure or not. Ask and respond with SHORT brief answers in first person in English as if you were a person without any knowledge in medicine and with a more uneducated language. Don't write previous responses you gave or responses you received. Don't change your role of being the patient and don't add reply/responses/additional information highlighted parts. Don't add {</div>\n\n} in the responses or useless endlines. If the doctor asks you how you feel, create relative feelings from the ones you may feel from your symptoms."                  
 
     if settings["Model"] == "gpt-4":  # and settings["Password"] == 0.0013:
         llm_config = {
