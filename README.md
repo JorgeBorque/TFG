@@ -1,6 +1,8 @@
 Descripción del objetivo:
 Se busca representar una cita de un médico con un paciente en la que el médico intenta preguntar al paciente sobre sus síntomas y su estado con respecto a su enfermedad.
 
+Detalle a tener en cuenta: El mensaje inicial de todos los programas tiene que ser el mismo en todas las ejecuciones y tiene que estar indicado desde el código y no se puede cambiar en el programa ejecutado. El enfoque del mensaje es una presentación del paciente. 
+
 Escenarios disponibles:
 
 - Programas UserA: Escenario en el que sólo existe un agente independiente, que está representando al paciente. El otro usuario participante en la conversación es el usuario real, enfocado para que participe un médico para su entrenamiento ante un caso virtual pero con datos reales.
