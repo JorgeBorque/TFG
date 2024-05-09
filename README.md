@@ -52,4 +52,16 @@ Todos los modelos menos gpt-4 deben de ser antes cargados en la siguiente direcc
 
 Para gpt-4 haría falta una clave secreta.
 
+Pruebas de las emociones con todos los modelos locales utilizados POR AHORA:
+
+Prueba con UserA_Emotions -- Emociones en paciente únicamente
+Modelos locales con emociones:
+meta-llama_Meta-Llama-3-8B -- Mal reconocimiento de la emoción y mala representación
+mistralai_Mixtral-8x7B-Instruct-v0.1 -- No se puede probar por límite del almacenamiento
+Kabster_BioMistral-MedicalQA-FT -- Lento y respuestas que no tienen nada que ver
+TheBloke_meditron-7B-GPTQ -- Parece que puede entenderlas pero no llega a escoger bien la emoción asignada, puede ser que dependa del historial médico / la información recibida -- Se descontrolan las salidas
+meditron-7b -- Reconocimiento 50/50, a veces reconoce bien la emoción pero no la desarrolla en todas las respuestas, tienes que buscar específicamente lo que la sensación que le has introducido dice. No muy preciso por como tienes que averiguar la emoción escogida
+AI-Growth-Lab_llama-2-7b-clinical-innovation -- Muy buena interpretación de los sentimientos y sus relaciones a otras emociones o sensaciones que siente el paciente. Las emociones "negativas" las representa muy bien y las positivas por ahora también -- Se queda parado en algun momento??? Igual es por el servidor o los datos???
+PARECE QUE FUNCIONA TODO IGUAL CON EL Charge1Each
+
 
