@@ -430,7 +430,7 @@ async def run_conversation(message: cl.Message):
         #message= "Please nurse Ana, could you bring me the next patient, please?."
         #message = "Please doctor write the number you want."
         groupchat = GroupChat(agents=[user_doctor, nurse, patient], messages=[], max_round=20)
-        manager = GroupChatManager(groupchat=groupchat, llm_config=llm_config, system_message="The conversation begins with the doctor writing his number, then the nurse will write his number depending on the previous number and finally the doctor and the patient will write their numbers consecutively depending on the last one written. In this moment the nurse won't write any number and it will wait until he decides.")#system_message="When the nurse gets the patient to talk to the doctor, always select the doctor and the patient to respond to each other until the doctor has taken a decision on whether the patient has congestive heart failure or not.")
+        manager = GroupChatManager(groupchat=groupchat, llm_config=llm_config, system_message="When the nurse gets the patient to talk to the doctor, always select the doctor and the patient to respond to each other until the doctor has taken a decision on whether the patient has congestive heart failure or not.")
 
         await cl.make_async(manager.initiate_chat)( user_doctor, message=message, )
         #await cl.make_async(user_doctor.initiate_chat)( manager, message=message, )
