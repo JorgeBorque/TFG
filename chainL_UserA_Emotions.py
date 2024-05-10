@@ -233,13 +233,13 @@ async def on_chat_start():
                     id="DataExtract",
                     label="Select the method to use for getting data:",
                     values=["charge1Each", "chargeFromSpecific", "chargeSpecificFileICC", "chargeSpecificFileNOICC"],
-                    initial_index=0
+                    initial_index=1
                 ),
                 cl.input_widget.Select(
                     id="FileToExtractFrom",
                     label="Select the directory to get data from:",
                     values=["ICC", "NOICC"],
-                    initial_index=0
+                    initial_index=1
                 ),
                 cl.input_widget.Slider(id="NumberSamples", label="Number of file samples", initial=1, min=1, max=3, step=1),
                 # cl.input_widget.Slider(id="Password", label="ArgumentsForConvo", initial=0, min=0, max=3, step=0.0001),
