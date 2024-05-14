@@ -12,7 +12,7 @@ The simulation you are going to take part in consists in adopting the role of a 
 You are going to talk to a patient who has or hasn't a congestive heart failure disease and you'll have to diagnose them with it or not.
 
 
-## Settings explanation
+## Settings explanation  IMPORTANT!! : YOU'LL HAVE TO ACCEPT THE SETTINGS IN ORDER TO CONVERSATION POSSIBLE 
 
 The process is the following: 
 
@@ -30,7 +30,7 @@ The process is the following:
 
 - After picking the options, you will begin to talk with the patient. Take into account that the first message written has to be "Please present yourself." which will help you to get a brief introduction from the patient.
 
-- When you feel that the conversation has finished, you can restart the program by reloading the page or by clicking on the "New Chat" button on the top right hand side of the screen.
+- When you feel that the conversation has finished, you can restart the program by reloading the page or by selecting new settings in the settings section.
 
 
 If you're in the middle of the conversation and you want to check out these instructions again please select the readme option on the top side of the screen.
