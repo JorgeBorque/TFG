@@ -30,6 +30,7 @@ The process is the following:
 
 - After picking the options, you will begin to talk with the patient. Take into account that the first message written has to be "Please present yourself." which will help you to get a brief introduction from the patient.
 
+## Finish the conversation
 - When you feel that the conversation has finished, you can restart the program by reloading the page or by selecting new settings in the settings section.
 
 
