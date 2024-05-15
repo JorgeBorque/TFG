@@ -1,4 +1,4 @@
-# Welcome to gthe virtual patient simulator! 🚀🤖
+# Welcome to the virtual patient simulator! 🚀🤖
 
 Hi there, Doctor! 👋 You're going to have a brief talk with a patient who may be possibly diagnosed with congestive heart failure or not.
 
