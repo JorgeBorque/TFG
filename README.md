@@ -1,17 +1,17 @@
-*Instalación del entorno de conda con el fichero yml*: Únicamente hay que instalar conda en nuestro ordenador y crear un entorno de conda con el siguiente comando: conda env create -f condaEnv.yml 
+**Instalación del entorno de conda con el fichero yml**: Únicamente hay que instalar conda en nuestro ordenador y crear un entorno de conda con el siguiente comando: conda env create -f condaEnv.yml 
 
 Una vez instalado el entorno, se deben ejecutar los programas desde la carpeta TFG (tener en cuenta que la carpeta de datos "data" debe de estar al mismo nivel que los programas para su acceso adecuado.
 
-Descripción del objetivo:
+**Descripción del objetivo**:
 Se busca representar una cita de un médico con un paciente en la que el médico intenta preguntar al paciente sobre sus síntomas y su estado con respecto a su enfermedad.
 
 La idea es utilizar los dos programas con emociones pero por ahora se mantienen las versiones antiguas sin emociones en el repositorio.
 
-Detalle a tener en cuenta: El mensaje inicial de todos los programas tiene que ser el mismo en todas las ejecuciones y tiene que estar indicado desde el código y no se puede cambiar en el programa ejecutado. El enfoque del mensaje es una presentación del paciente. 
+**Detalle a tener en cuenta**: El mensaje inicial de todos los programas tiene que ser el mismo en todas las ejecuciones y tiene que estar indicado desde el código y no se puede cambiar en el programa ejecutado. El enfoque del mensaje es una presentación del paciente. 
 
-Escenarios disponibles:
+**Escenarios disponibles**:
 
-- Programas UserA: Escenario en el que sólo existe un agente independiente, que está representando al paciente. El otro usuario participante en la conversación es el usuario real, enfocado para que participe un médico para su entrenamiento ante un caso virtual pero con datos reales.
+- **Programas UserA**: Escenario en el que sólo existe un agente independiente, que está representando al paciente. El otro usuario participante en la conversación es el usuario real, enfocado para que participe un médico para su entrenamiento ante un caso virtual pero con datos reales.
 
   Ejecución de estos programas :  
     - chainlit run chainL_UserA.py               - Versión básica del programa
@@ -19,7 +19,7 @@ Escenarios disponibles:
 
   Mensaje inicial incluido: "Please present yourself"
   
-- Programas UserN: Escenario en el que participan como mínimo dos agentes independientes, que representarán a un paciente y a un médico.
+- **Programas UserN**: Escenario en el que participan como mínimo dos agentes independientes, que representarán a un paciente y a un médico.
 
   Ejecución de estos programas :  
     - chainlit run chainL_UserN.py               - Versión básica del programa
@@ -30,14 +30,14 @@ Escenarios disponibles:
   Mensaje inicial incluido sin enfermero/a : "Please present yourself"
   Mensaje inicial incluido con enfermero/a : "Please present yourself to the others and begin the conversation."
   
-Modos de uso de los programas - Casos de uso (Apartado DataExtract en las opciones dentro del programa) (Común a los dos escenarios disponibles) :
+**Modos de uso de los programas** - Casos de uso (Apartado DataExtract en las opciones dentro del programa) (Común a los dos escenarios disponibles) :
   - charge1Each: Carga dos conjuntos de datos, uno de la carpeta de ICC y otro de NOICC y encarga al agente paciente que seleccione uno de estos dos aleatoriamente y represente al paciente.
   - chargeFromSpecific: Carga un conjunto de datos de la carpeta que se le indica en el apartado FileToExtractFrom en ajustes del programa.
   - chargeSpecificFileICC: Carga un conjunto de datos específico de la carpeta de datos ICC indicado desde el código, no se puede cambiar desde el programa.
   - chargeSpecificFileNOICC: Carga un conjunto de datos específico de la carpeta de datos NOICC indicado desde el código, no se puede cambiar desde el programa.
 
 
-Datos utilizados en cada programa:
+**Datos utilizados en cada programa**:
   - Para programa UserA:
       - Conjunto de datos sum (resúmenes extraídos de los historiales completos) -- Carpeta con sufijo _sum
   - Para programa UserN:
@@ -48,7 +48,7 @@ Datos utilizados en cada programa:
 Es adecuado tener la carpeta data organizada originalmente para tener el punto común de acceso a los datos en cualquier ejecución de todo programa.
 
 
-Modelos disponibles para su uso (por ahora):
+**Modelos disponibles para su uso (por ahora)**:
 
 "gpt-4", "AI-Growth-Lab_llama-2-7b-clinical-innovation", "meditron-7b", "TheBloke_meditron-7B-GPTQ", "Kabster_BioMistral-MedicalQA-FT", "meta-llama_Meta-Llama-3-8B"
 
@@ -56,7 +56,7 @@ Todos los modelos menos gpt-4 deben de ser antes cargados en la siguiente direcc
 
 Para gpt-4 haría falta una clave secreta.
 
-Pruebas de las emociones con todos los modelos locales utilizados POR AHORA:
+**Pruebas de las emociones con todos los modelos locales utilizados POR AHORA**:
 
 Prueba con UserA_Emotions -- Emociones en paciente únicamente
 Modelos locales con emociones:
