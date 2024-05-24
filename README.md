@@ -1,4 +1,4 @@
-**Instalación del entorno de conda con el fichero yml: Únicamente hay que instalar conda en nuestro ordenador y crear un entorno de conda con el siguiente comando: conda env create -f condaEnv.yml **
+*Instalación del entorno de conda con el fichero yml*: Únicamente hay que instalar conda en nuestro ordenador y crear un entorno de conda con el siguiente comando: conda env create -f condaEnv.yml 
 
 Una vez instalado el entorno, se deben ejecutar los programas desde la carpeta TFG (tener en cuenta que la carpeta de datos "data" debe de estar al mismo nivel que los programas para su acceso adecuado.
 
